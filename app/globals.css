@@ -556,6 +556,7 @@ h3 {
 }
 
 .programs {
+  width: min(1180px, 100%);
   display: grid;
   gap: clamp(22px, 4vw, 44px);
   padding-top: clamp(28px, 5vw, 56px);
@@ -578,6 +579,7 @@ h3 {
 }
 
 .program {
+  width: 100%;
   display: grid;
   gap: 20px;
 }
@@ -617,6 +619,7 @@ h3 {
 
 .program__timeline {
   position: relative;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 18px;
