@@ -329,11 +329,11 @@ h1 {
     linear-gradient(135deg, rgba(255, 255, 255, 0.085), rgba(255, 255, 255, 0.025));
 }
 
-.statement:not(.statement--primary) {
+.statement:not(.statement--primary):not(.statement--wide) {
   grid-column: span 6;
 }
 
-.statement--wide {
+.statement.statement--wide {
   min-height: 190px;
   grid-column: span 12;
 }
@@ -727,6 +727,7 @@ h3 {
   .statement,
   .statement--primary,
   .statement:not(.statement--primary),
+  .statement.statement--wide,
   .day-card {
     grid-column: 1;
   }
@@ -763,13 +764,13 @@ h3 {
   .program__timeline {
     grid-template-columns: 1fr;
     gap: 14px;
-    padding: 0 0 0 22px;
+    padding: 12px 0 0;
   }
 
   .program__stop::before {
-    top: 50%;
-    left: -24px;
-    transform: translateY(-50%);
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
