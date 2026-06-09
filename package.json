@@ -1,0 +1,41 @@
+{
+  "name": "berlinboat",
+  "version": "1.0.0",
+  "description": "Landing page for the Berlin boat event.",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rickkdev/berlinboat.git"
+  },
+  "keywords": [
+    "berlin",
+    "boat",
+    "event"
+  ],
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/rickkdev/berlinboat/issues"
+  },
+  "homepage": "https://github.com/rickkdev/berlinboat#readme",
+  "dependencies": {
+    "lucide-react": "^1.17.0",
+    "next": "^16.2.7",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.2",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^9.39.4",
+    "eslint-config-next": "^16.2.7",
+    "typescript": "^6.0.3"
+  }
+}
