@@ -85,8 +85,8 @@ const programs = [
       },
       {
         time: "16:30-19:00",
-        route: "funkhaus -> maybachufer (blockspäti) -> funkhaus",
-        title: "blockspäti beer pickup",
+        route: "funkhaus -> jannowitzbrücke (dappcon) -> funkhaus",
+        title: "conference connector #3",
       },
       {
         time: "19:15-22:00",
