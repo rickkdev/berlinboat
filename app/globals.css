@@ -173,7 +173,7 @@ a {
   color: inherit;
   font-size: 0.86rem;
   font-weight: 850;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 h1,
@@ -383,7 +383,7 @@ h2 {
   margin: 0 0 12px;
   color: rgba(255, 250, 240, 0.72);
   font-weight: 850;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 h3 {
@@ -605,7 +605,7 @@ h3 {
   color: rgba(255, 250, 240, 0.62);
   font-size: 0.82rem;
   font-weight: 900;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .program__intro h3 {

@@ -3,91 +3,95 @@ import { CalendarDays, ExternalLink, MapPin, MoveRight, Ticket } from "lucide-re
 
 const eventDays = [
   {
-    name: "AI Day",
-    date: "June 16, 2026",
+    name: "ai day",
+    title: "bertie the boat: ai day",
+    date: "june 16, 2026",
+    when: "10:30 til late",
     href: "https://luma.com/a5f93n7y",
     summary:
-      "The opening day for builders, creators, and operators gathering on the Spree.",
+      "june 16 is the ai crowd. you board, you tell me what you are building, i make the introductions out loud somewhere in the middle of the river.",
     perks: [
-      "Full-day boat access",
-      "Futura Camp conference ticket day pass",
-      "Evening BBQ at Futura Camp",
+      "full day on me",
+      "futura camp day pass",
+      "bbq after",
     ],
   },
   {
-    name: "Protocol Day",
-    date: "June 17, 2026",
+    name: "protocol day",
+    title: "bertie the boat: protocol day",
+    date: "june 17, 2026",
+    when: "10:30 til 22:00",
     href: "https://luma.com/um189sij",
     summary:
-      "A separate ticketed day focused on protocol conversations and deeper technical exchange.",
+      "june 17 is researchers, builders, infra people, and the people who fund them. the words get harder and the conversations get longer.",
     perks: [
-      "Full-day boat access",
-      "Futura Camp conference ticket day pass",
-      "Sunset Cruise",
+      "full day on me",
+      "futura camp day pass",
+      "sunset cruise",
     ],
   },
 ];
 
 const programs = [
   {
-    day: "June 16",
-    name: "The AI Day",
+    day: "june 16",
+    name: "bertie the boat: ai day",
     focus:
-      "AI founders, researchers, agent ecosystems, and conference connectivity.",
+      "ai founders, researchers, agent ecosystems, and the person you needed to meet but would absolutely have missed.",
     blocks: [
       {
         time: "10:30-13:00",
-        route: "Funkhaus -> Jannowitzbrücke (DappCon) -> Funkhaus",
-        title: "Conference Connector #1",
+        route: "funkhaus -> jannowitzbrücke (dappcon) -> funkhaus",
+        title: "conference connector #1",
       },
       {
         time: "13:30-16:00",
-        route: "Funkhaus -> Jannowitzbrücke (DappCon) -> Funkhaus",
-        title: "Conference Connector #2",
+        route: "funkhaus -> jannowitzbrücke (dappcon) -> funkhaus",
+        title: "conference connector #2",
       },
       {
         time: "16:30-19:00",
-        route: "Funkhaus -> Jannowitzbrücke (DappCon) -> Funkhaus",
-        title: "Conference Connector #3",
+        route: "funkhaus -> jannowitzbrücke (dappcon) -> funkhaus",
+        title: "conference connector #3",
       },
     ],
     after: {
-      title: "BBQ at Futura Camp",
-      time: "From 19:00",
+      title: "bbq at futura camp",
+      time: "from 19:00",
       items: [
-        "Food & drinks",
-        "Founder networking",
-        "AI community meetup",
-        "Sponsor activations",
-        "Community gathering",
+        "food and drinks",
+        "founder problems solved on deck",
+        "ai community meetup",
+        "later there is worse than coffee",
+        "community gathering",
       ],
     },
   },
   {
-    day: "June 17",
-    name: "The Protocol Day",
+    day: "june 17",
+    name: "bertie the boat: protocol day",
     focus:
-      "Ethereum, protocols, infrastructure, builders, and the flagship sunset experience.",
+      "researchers, builders, infra people, funders, and protocol discourse i was not built for and yet here i am.",
     blocks: [
       {
         time: "10:30-13:00",
-        route: "Funkhaus -> Jannowitzbrücke (DappCon) -> Funkhaus",
-        title: "Conference Connector #1",
+        route: "funkhaus -> jannowitzbrücke (dappcon) -> funkhaus",
+        title: "core dev at the bow",
       },
       {
         time: "13:30-16:00",
-        route: "Funkhaus -> Jannowitzbrücke (DappCon) -> Funkhaus",
-        title: "Conference Connector #2",
+        route: "funkhaus -> jannowitzbrücke (dappcon) -> funkhaus",
+        title: "conference connector #2",
       },
       {
         time: "16:30-19:00",
-        route: "Funkhaus -> Maybachufer (Blockspäti) -> Funkhaus",
-        title: "Conference Connector #3",
+        route: "funkhaus -> maybachufer (blockspäti) -> funkhaus",
+        title: "blockspäti beer pickup",
       },
       {
-        time: "19:30-22:00",
-        route: "Berlin from the water",
-        title: "The Sunset Cruise",
+        time: "19:15-22:00",
+        route: "berlin from the water",
+        title: "the sunset cruise",
       },
     ],
   },
@@ -96,27 +100,27 @@ const programs = [
 const impressions = [
   {
     src: "/impressions/boattrip-01.jpg",
-    alt: "Guests gathered on a Berlin boat deck.",
+    alt: "guests gathered on a berlin boat deck.",
   },
   {
     src: "/impressions/boattrip-02.jpg",
-    alt: "People networking during a boat trip in Berlin.",
+    alt: "people networking during a boat trip in berlin.",
   },
   {
     src: "/impressions/boattrip-03.jpg",
-    alt: "A boat event group on the water in Berlin.",
+    alt: "a boat event group on the water in berlin.",
   },
   {
     src: "/impressions/boattrip-04.jpg",
-    alt: "Berlin boat event guests seated and talking.",
+    alt: "berlin boat event guests seated and talking.",
   },
   {
     src: "/impressions/boattrip-05.jpg",
-    alt: "A group of guests outdoors during a Berlin boat trip.",
+    alt: "a group of guests outdoors during a berlin boat trip.",
   },
   {
     src: "/impressions/boattrip-06.jpg",
-    alt: "People meeting on a boat deck during a Berlin event.",
+    alt: "people meeting on a boat deck during a berlin event.",
   },
 ];
 
@@ -149,31 +153,31 @@ function RouteLabel({ route }: { route: string }) {
 export default function Home() {
   return (
     <main>
-      <section className="hero" aria-label="Berlin Boat event">
+      <section className="hero" aria-label="bertie the boat event">
         <div className="berlin-scene" aria-hidden="true">
           <div className="scene-photo" />
         </div>
         <div className="hero__shade" />
-        <nav className="topbar" aria-label="Event navigation">
-          <a className="brand" href="#top" aria-label="Berlin Boat home">
-            Berlin Boat
+        <nav className="topbar" aria-label="event navigation">
+          <a className="brand" href="#top" aria-label="bertie the boat home">
+            bertie
           </a>
           <a className="topbar__link" href="#tickets">
-            Tickets
+            tickets
           </a>
         </nav>
 
         <div className="hero__content" id="top">
           <p className="eyebrow">
             <MapPin size={17} aria-hidden="true" />
-            Berlin, on the Spree
+            berlin, on the spree
           </p>
-          <h1>Berlin Boat</h1>
+          <h1>bertie the boat</h1>
           <p className="hero__copy">
-            Two separate days, one floating Berlin gathering. Join AI Day on June
-            16 or Protocol Day on June 17, with each ticket handled on Luma.
+            hi. i am bertie. i am a boat. people keep asking me to explain
+            myself and i will not be doing that.
           </p>
-          <div className="hero__actions" aria-label="Primary Luma ticket links">
+          <div className="hero__actions" aria-label="primary luma ticket links">
             {eventDays.map((event) => (
               <a className="button" href={event.href} key={event.name}>
                 <Ticket size={18} aria-hidden="true" />
@@ -187,10 +191,10 @@ export default function Home() {
 
       <section className="impressions" aria-labelledby="impressions-title">
         <div className="impressions__heading">
-          <p className="eyebrow">Impressions</p>
-          <h2 id="impressions-title">The week feels different on the water.</h2>
+          <p className="eyebrow">impressions</p>
+          <h2 id="impressions-title">the venue is me. i am a boat.</h2>
         </div>
-        <div className="impressions__carousel" aria-label="Boat impressions">
+        <div className="impressions__carousel" aria-label="boat impressions">
           <div className="impressions__track">
             {[0, 1].map((group) => (
               <div className="impressions__group" key={group}>
@@ -217,9 +221,9 @@ export default function Home() {
           <div className="section-heading">
             <p className="eyebrow">
               <CalendarDays size={17} aria-hidden="true" />
-              Separate Luma tickets
+              separate luma tickets
             </p>
-            <h2 id="tickets-title">Two days. One floating layer.</h2>
+            <h2 id="tickets-title">two events, one voice, no chill.</h2>
           </div>
           <div className="section-boat" aria-hidden="true">
             <svg viewBox="0 0 560 260" role="presentation">
@@ -265,33 +269,33 @@ export default function Home() {
 
         <div className="bento-grid">
           <article className="statement statement--primary">
-            <span>Berlin Blockchain Week, off the street grid.</span>
+            <span>bertie is a boat that posts like it has been online too long.</span>
             <p>
-              A floating social layer for conferences, founders, builders,
-              researchers, and investors, with Berlin passing by from the water.
+              funny, blunt, a little unhinged, occasionally profound by
+              accident. never explains the joke. has main character energy.
             </p>
           </article>
           <article className="statement">
-            <span>Swap the ride across town for the Spree.</span>
+            <span>replace your uber with a boat.</span>
             <p>
-              Move between the week&apos;s conversations by boat, not another
-              back seat.
+              i have been saying this for days and nobody can prove me wrong.
             </p>
           </article>
           {eventDays.map((event, index) => (
             <article className="day-card" key={event.name}>
               <span className="day-card__number">0{index + 1}</span>
               <div>
-                <p className="day-card__date">{event.date}</p>
-                <h3>{event.name}</h3>
+                <p className="day-card__date">
+                  {event.date}, {event.when}
+                </p>
+                <h3>{event.title}</h3>
                 <p>{event.summary}</p>
                 <ul className="day-card__perks" aria-label={`${event.name} perks`}>
                   {event.perks.map((perk) => (
                     <li key={perk}>
-                      {perk === "Futura Camp conference ticket day pass" ? (
+                      {perk === "futura camp day pass" ? (
                         <>
-                          <a href="https://futura.camp/">Futura Camp</a>{" "}
-                          conference ticket day pass
+                          <a href="https://futura.camp/">futura camp</a> day pass
                         </>
                       ) : (
                         perk
@@ -301,29 +305,31 @@ export default function Home() {
                 </ul>
               </div>
               <a className="day-card__link" href={event.href}>
-                Get this Luma ticket
+                get this luma ticket
                 <ExternalLink size={17} aria-hidden="true" />
               </a>
             </article>
           ))}
           <article className="statement statement--wide">
-            <span>More on-board programming is planned.</span>
+            <span>we have a lot planned. please be surprised.</span>
             <p>
-              Expect founder challenges, floating coworking, product demos,
-              minigames, and community sessions throughout the day. Check the
-              Luma pages for the latest programming details.
+              bertie carries you between the conferences of berlin blockchain
+              week and introduces you to the people you would otherwise miss.
+              you can also co-work on me, technically. we are in germany, so
+              internet is not a given. prepare like you are on an ice train:
+              self-host a 20b model, rock it offline, and act normal.
             </p>
           </article>
         </div>
 
         <section className="programs" aria-labelledby="programs-title">
           <div className="programs__heading">
-            <p className="eyebrow">Program</p>
-            <h2 id="programs-title">Main routes, landmarks in between.</h2>
+            <p className="eyebrow">program</p>
+            <h2 id="programs-title">i float between the conferences all day.</h2>
             <p>
-              These are the core routes for each day. Between the conference
-              connectors, the boat will also pass selected Berlin landmarks on
-              the Spree.
+              you board, you tell me what you are building, i make the
+              introductions out loud somewhere in the middle of the river. one
+              ticket, hop on any sailing that day.
             </p>
           </div>
 

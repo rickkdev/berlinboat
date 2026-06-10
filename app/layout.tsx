@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Berlin Boat | June 16-17",
+  title: "bertie the boat | june 16-17",
   description:
-    "Two separate Berlin boat event days on the Spree: AI Day on June 16 and Protocol Day on June 17.",
+    "two separate bertie the boat event days on the spree: ai day on june 16 and protocol day on june 17.",
 };
 
 export default function RootLayout({
