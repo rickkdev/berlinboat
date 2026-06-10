@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import {
   Anchor,
@@ -29,6 +30,33 @@ const whyItWorks = [
   "two days of high-signal builders, researchers, founders, funders, and protocol people",
   "small enough that people actually talk to each other",
   "we float between the conferences instead of fighting for hallway space",
+];
+
+const boatImages = [
+  {
+    src: "/impressions/boattrip-01.jpg",
+    alt: "guests gathered on a berlin boat deck.",
+  },
+  {
+    src: "/impressions/boattrip-02.jpg",
+    alt: "people networking during a boat trip in berlin.",
+  },
+  {
+    src: "/impressions/boattrip-03.jpg",
+    alt: "a boat event group on the water in berlin.",
+  },
+  {
+    src: "/impressions/boattrip-04.jpg",
+    alt: "berlin boat event guests seated and talking.",
+  },
+  {
+    src: "/impressions/boattrip-05.jpg",
+    alt: "a group of guests outdoors during a berlin boat trip.",
+  },
+  {
+    src: "/impressions/boattrip-06.jpg",
+    alt: "people meeting on a boat deck during a berlin event.",
+  },
 ];
 
 export default function SponsorPage() {
@@ -99,6 +127,26 @@ export default function SponsorPage() {
             </a>
           </div>
         </article>
+      </section>
+
+      <section className="sponsor-gallery" aria-labelledby="sponsor-gallery-title">
+        <div className="sponsor-gallery__heading">
+          <p className="eyebrow">boat proof</p>
+          <h2 id="sponsor-gallery-title">this is the vibe sponsors get.</h2>
+        </div>
+        <div className="sponsor-gallery__grid">
+          {boatImages.map((image) => (
+            <figure className="sponsor-gallery__image" key={image.src}>
+              <Image
+                src={image.src}
+                alt={image.alt}
+                width={1600}
+                height={1066}
+                sizes="(max-width: 760px) 50vw, (max-width: 1100px) 33vw, 22vw"
+              />
+            </figure>
+          ))}
+        </div>
       </section>
 
       <section className="sponsor-details" aria-label="sponsor details">
