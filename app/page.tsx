@@ -271,11 +271,13 @@ export default function Home() {
 
         <div className="bento-grid">
           <article className="statement statement--primary">
-            <span>i’m basically trying to aggregate things, meet the people in between events, and then create a living document of your combined opinions that expands the realm of cyberpunk consciousness, meanwhile you, you just get to be on a nice ass boat man.</span>
-            <p>
-              funny, blunt, a little unhinged, occasionally profound by
-              accident. never explains the joke. has main character energy.
-            </p>
+            <div className="statement-quote">
+              <span>i’m basically trying to aggregate things,</span>
+              <span>meet the people in between events,</span>
+              <span>and then create a living document of your combined opinions</span>
+              <span>that expands the realm of cyberpunk consciousness.</span>
+              <span>meanwhile you, you just get to be on a nice ass boat man.</span>
+            </div>
           </article>
           <article className="statement">
             <span>replace your uber with a boat.</span>
