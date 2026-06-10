@@ -669,6 +669,24 @@ h3 {
   line-height: 1.4;
 }
 
+.program__stop .route-label {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 8px;
+}
+
+.route-label__stop {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.route-label__icon {
+  flex: 0 0 auto;
+  color: rgba(255, 250, 240, 0.9);
+}
+
 .program__stop ul {
   margin: 0;
   padding-left: 18px;

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { CalendarDays, ExternalLink, MapPin, Ticket } from "lucide-react";
+import { CalendarDays, ExternalLink, MapPin, MoveRight, Ticket } from "lucide-react";
 
 const eventDays = [
   {
@@ -119,6 +119,32 @@ const impressions = [
     alt: "People meeting on a boat deck during a Berlin event.",
   },
 ];
+
+function RouteLabel({ route }: { route: string }) {
+  const stops = route.split(" -> ");
+
+  if (stops.length === 1) {
+    return <span>{route}</span>;
+  }
+
+  return (
+    <span className="route-label" aria-label={route}>
+      {stops.map((stop, index) => (
+        <span className="route-label__stop" key={`${stop}-${index}`}>
+          {index > 0 ? (
+            <MoveRight
+              className="route-label__icon"
+              size={16}
+              strokeWidth={2.4}
+              aria-hidden="true"
+            />
+          ) : null}
+          <span>{stop}</span>
+        </span>
+      ))}
+    </span>
+  );
+}
 
 export default function Home() {
   return (
@@ -313,7 +339,7 @@ export default function Home() {
                   <div className="program__stop" key={`${program.name}-${block.time}`}>
                     <p>{block.time}</p>
                     <h4>{block.title}</h4>
-                    <span>{block.route}</span>
+                    <RouteLabel route={block.route} />
                   </div>
                 ))}
                 {program.after ? (
