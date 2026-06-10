@@ -225,7 +225,7 @@ export default function Home() {
               <CalendarDays size={17} aria-hidden="true" />
               separate luma tickets
             </p>
-            <h2 id="tickets-title">two events, one voice, no chill.</h2>
+            <h2 id="tickets-title">“I’m hosting two days with a bunch of events, it’s pretty spontaneous right now so I’ll add more when I feel like it “</h2>
           </div>
           <div className="section-boat" aria-hidden="true">
             <svg viewBox="0 0 560 260" role="presentation">
