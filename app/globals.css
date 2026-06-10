@@ -148,12 +148,19 @@ a {
   min-height: 42px;
   display: inline-flex;
   align-items: center;
+  gap: 8px;
   padding: 0 17px;
   border: 1px solid rgba(255, 255, 255, 0.62);
   border-radius: 999px;
   background: rgba(0, 0, 0, 0.24);
   backdrop-filter: blur(16px);
   font-weight: 750;
+}
+
+.topbar__links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .hero__content {
@@ -698,6 +705,234 @@ h3 {
     rgba(255, 255, 255, 0.04);
 }
 
+.sponsor-page {
+  min-height: 100svh;
+  background: #050505;
+  color: #fffaf0;
+}
+
+.sponsor-hero {
+  min-height: 76svh;
+  position: relative;
+  display: grid;
+  align-items: end;
+  overflow: hidden;
+  background: #050505;
+}
+
+.sponsor-hero__photo {
+  position: absolute;
+  inset: -2%;
+  background-image: url("/impressions/boattrip-03.jpg");
+  background-position: 50% 42%;
+  background-size: cover;
+  filter: grayscale(1) contrast(1.18) brightness(0.62);
+  transform: scale(1.02);
+}
+
+.sponsor-hero__shade {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.84), rgba(0, 0, 0, 0.16) 56%),
+    linear-gradient(0deg, #050505 0%, rgba(5, 5, 5, 0.78) 14%, transparent 36%);
+  pointer-events: none;
+}
+
+.sponsor-hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  z-index: 2;
+  height: clamp(72px, 12vw, 150px);
+  background: linear-gradient(0deg, #050505 0%, rgba(5, 5, 5, 0) 100%);
+  pointer-events: none;
+}
+
+.sponsor-topbar {
+  z-index: 3;
+}
+
+.sponsor-hero__content {
+  position: relative;
+  z-index: 2;
+  width: min(980px, calc(100% - 40px));
+  margin: 0 0 clamp(58px, 10vh, 110px) var(--gutter);
+  text-shadow: 0 2px 24px rgba(4, 20, 25, 0.52);
+}
+
+.sponsor-hero__copy {
+  max-width: 780px;
+  margin: 28px 0 0;
+  color: rgba(255, 250, 240, 0.9);
+  font-size: clamp(1.1rem, 1.8vw, 1.55rem);
+  font-weight: 650;
+  line-height: 1.45;
+}
+
+.sponsor-brief,
+.sponsor-details {
+  width: min(1180px, calc(100% - (var(--gutter) * 2)));
+  margin: 0 auto;
+}
+
+.sponsor-brief {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 430px);
+  align-items: stretch;
+  gap: 18px;
+  padding: clamp(54px, 8vw, 96px) 0 clamp(22px, 4vw, 42px);
+}
+
+.sponsor-brief__intro {
+  display: grid;
+  align-content: center;
+  gap: 18px;
+  padding: clamp(24px, 4vw, 42px);
+  border: 1px solid rgba(255, 250, 240, 0.16);
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 88% 12%, rgba(255, 250, 240, 0.08), transparent 32%),
+    rgba(255, 255, 255, 0.035);
+}
+
+.sponsor-brief__intro .eyebrow,
+.sponsor-panel .eyebrow {
+  margin-bottom: 0;
+  color: rgba(255, 250, 240, 0.72);
+}
+
+.sponsor-brief__intro p:not(.eyebrow) {
+  max-width: 720px;
+  margin: 0;
+  color: rgba(255, 250, 240, 0.68);
+  font-size: clamp(1rem, 1.3vw, 1.2rem);
+  font-weight: 650;
+  line-height: 1.55;
+}
+
+.sponsor-tier {
+  min-height: 440px;
+  display: grid;
+  align-content: space-between;
+  gap: 32px;
+  padding: clamp(24px, 4vw, 42px);
+  border: 1px solid rgba(255, 250, 240, 0.22);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(255, 250, 240, 0.14), rgba(255, 255, 255, 0.035)),
+    rgba(255, 255, 255, 0.055);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.34);
+}
+
+.sponsor-tier__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  color: rgba(255, 250, 240, 0.72);
+  font-size: 0.86rem;
+  font-weight: 900;
+}
+
+.sponsor-tier__top p {
+  margin: 0;
+}
+
+.sponsor-tier h3 {
+  font-size: clamp(3.2rem, 7vw, 6.6rem);
+}
+
+.sponsor-tier span {
+  display: block;
+  max-width: 330px;
+  margin-top: 18px;
+  color: rgba(255, 250, 240, 0.72);
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.sponsor-tier__actions {
+  width: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.sponsor-tier__cta,
+.sponsor-tier__mail {
+  min-height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 0 18px;
+  border-radius: 8px;
+  font-weight: 850;
+}
+
+.sponsor-tier__cta {
+  background: #fffaf0;
+  color: #050505;
+}
+
+.sponsor-tier__mail {
+  border: 1px solid rgba(255, 250, 240, 0.24);
+  background: rgba(255, 255, 255, 0.055);
+  color: #fffaf0;
+}
+
+.sponsor-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  padding: 0 0 clamp(70px, 10vw, 120px);
+}
+
+.sponsor-panel {
+  display: grid;
+  align-content: start;
+  gap: 24px;
+  padding: clamp(24px, 4vw, 38px);
+  border: 1px solid rgba(255, 250, 240, 0.16);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.025)),
+    rgba(255, 255, 255, 0.035);
+}
+
+.sponsor-panel--quiet {
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.sponsor-panel ul {
+  display: grid;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sponsor-panel li {
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+  color: rgba(255, 250, 240, 0.74);
+  font-size: clamp(0.98rem, 1.18vw, 1.1rem);
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.sponsor-panel li svg {
+  margin-top: 0.16em;
+  color: #fffaf0;
+}
+
 @media (max-width: 760px) {
   :root {
     --gutter: 16px;
@@ -725,6 +960,15 @@ h3 {
   .hero__actions,
   .button {
     width: 100%;
+  }
+
+  .topbar__links {
+    gap: 8px;
+  }
+
+  .topbar__link {
+    min-height: 40px;
+    padding: 0 13px;
   }
 
   .scene-photo {
@@ -794,6 +1038,35 @@ h3 {
     top: -6px;
     left: 50%;
     transform: translateX(-50%);
+  }
+
+  .sponsor-hero {
+    min-height: 78svh;
+  }
+
+  .sponsor-hero__shade {
+    background:
+      linear-gradient(180deg, rgba(0, 0, 0, 0.36), rgba(0, 0, 0, 0.64)),
+      linear-gradient(0deg, #050505 0%, rgba(5, 5, 5, 0.9) 15%, transparent 34%);
+  }
+
+  .sponsor-hero__content {
+    width: calc(100% - 32px);
+    margin: 0 var(--gutter) 62px;
+  }
+
+  .sponsor-brief,
+  .sponsor-details {
+    width: calc(100% - (var(--gutter) * 2));
+  }
+
+  .sponsor-brief,
+  .sponsor-details {
+    grid-template-columns: 1fr;
+  }
+
+  .sponsor-tier {
+    min-height: 340px;
   }
 }
 

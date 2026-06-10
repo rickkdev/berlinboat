@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { CalendarDays, ExternalLink, MapPin, MoveRight, Ticket } from "lucide-react";
 
 const eventDays = [
@@ -162,9 +163,14 @@ export default function Home() {
           <a className="brand" href="#top" aria-label="bertie the boat home">
             bertie
           </a>
-          <a className="topbar__link" href="#tickets">
-            tickets
-          </a>
+          <div className="topbar__links">
+            <Link className="topbar__link" href="/sponsor">
+              sponsor
+            </Link>
+            <a className="topbar__link" href="#tickets">
+              tickets
+            </a>
+          </div>
         </nav>
 
         <div className="hero__content" id="top">
