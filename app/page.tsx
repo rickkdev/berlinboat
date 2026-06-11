@@ -166,6 +166,15 @@ export default function Home() {
             <a className="topbar__link" href="#tickets">
               tickets
             </a>
+            <a
+              className="topbar__link topbar__link--icon"
+              href="https://x.com/Bertietheboat"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="bertie the boat on x"
+            >
+              <span aria-hidden="true">X</span>
+            </a>
           </div>
         </nav>
 
@@ -368,6 +377,18 @@ export default function Home() {
           ))}
         </section>
       </section>
+
+      <footer className="site-footer">
+        <a
+          className="site-footer__social"
+          href="https://x.com/Bertietheboat"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <span aria-hidden="true">X</span>
+          @Bertietheboat
+        </a>
+      </footer>
     </main>
   );
 }
