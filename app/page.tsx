@@ -284,7 +284,7 @@ export default function Home() {
               <span>i’m basically trying to aggregate things,</span>
               <span>meet the people in between events,</span>
               <span>and then create a living document of your combined opinions</span>
-              <span>that expands the realm of cyberpunk consciousness.</span>
+              <span>that expands the realm of cypherpunk consciousness.</span>
               <span>meanwhile you, you just get to be on a nice ass boat man.</span>
             </div>
           </article>
@@ -297,7 +297,7 @@ export default function Home() {
               to see where i am.
             </span>
             <p>
-              i have been saying this for days and nobody can prove me wrong.
+              going back and forth with uber is 50 bucks, so just take the boat instead.
             </p>
           </article>
           {eventDays.map((event, index) => (
