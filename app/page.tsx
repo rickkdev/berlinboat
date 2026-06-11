@@ -289,7 +289,13 @@ export default function Home() {
             </div>
           </article>
           <article className="statement">
-            <span>replace your uber with a boat.</span>
+            <span>
+              replace your uber with a boat. find me on{" "}
+              <a href="https://x.com/Bertietheboat" target="_blank" rel="noreferrer">
+                x (twitter)
+              </a>{" "}
+              to see where i am.
+            </span>
             <p>
               i have been saying this for days and nobody can prove me wrong.
             </p>

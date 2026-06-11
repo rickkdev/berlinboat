@@ -331,6 +331,13 @@ h1 {
   line-height: 1.16;
 }
 
+.statement span a {
+  color: #fffaf0;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.14em;
+}
+
 .statement p {
   max-width: 620px;
   margin: 0;
