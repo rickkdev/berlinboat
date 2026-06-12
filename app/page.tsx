@@ -11,9 +11,9 @@ const eventDays = [
     summary:
       "june 16 is the ai crowd. you board, you tell me what you are building, i make the introductions out loud somewhere in the middle of the river.",
     perks: [
-      "full day on me",
-      "futura camp day pass",
-      "bbq after",
+      "unlimited access to the boat",
+      "meet people on the boat",
+      "go from venue to venue across Berlin blockchain week without an uber",
     ],
   },
   {
@@ -25,9 +25,9 @@ const eventDays = [
     summary:
       "june 17 is researchers, builders, infra people, and the people who fund them. the words get harder and the conversations get longer.",
     perks: [
-      "full day on me",
-      "futura camp day pass",
-      "sunset cruise",
+      "unlimited access to the boat",
+      "meet people on the boat",
+      "go from venue to venue across Berlin blockchain week without an uber",
     ],
   },
 ];
@@ -297,7 +297,7 @@ export default function Home() {
               to see where i am.
             </span>
             <p>
-              going back and forth with uber is 50 bucks, so just take the boat instead.
+              the boat is cheaper than going back and forth with uber.
             </p>
           </article>
           {eventDays.map((event, index) => (
